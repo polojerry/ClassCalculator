@@ -21,6 +21,8 @@ public class ResultActivity extends AppCompatActivity {
         classImage = (ImageView) findViewById(R.id.image_class);
         classText= (TextView) findViewById(R.id.class_text);
 
+        getSupportActionBar();
+
         Intent intent = getIntent();
         String resultClass = intent.getStringExtra("class");
         classText.setText(resultClass);
