@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
     Button calculate;
 
+    public static final String CLASS = "class";
+
     double As = 0;
     double Bs = 0;
     double Cs = 0;
@@ -58,25 +60,25 @@ public class MainActivity extends AppCompatActivity {
         if (average >= 70){
 
             Intent openResultActivity= new Intent(MainActivity.this,ResultActivity.class);
-            openResultActivity.putExtra("class","FIRST CLASS HONOUR");
+            openResultActivity.putExtra(CLASS,"FIRST CLASS HONOUR");
             openResultActivity.putExtra("image",R.drawable.first_class);
             startActivity(openResultActivity);
 
         }else if (average >=60){
             Intent openResultActivity= new Intent(MainActivity.this,ResultActivity.class);
-            openResultActivity.putExtra("class","SECOND CLASS UPPER");
+            openResultActivity.putExtra(CLASS,"SECOND CLASS UPPER");
             openResultActivity.putExtra("image",R.drawable.second_class);
             startActivity(openResultActivity);
 
         }else if(average >=50){
             Intent openResultActivity= new Intent(MainActivity.this,ResultActivity.class);
-            openResultActivity.putExtra("class","SECOND CLASS LOWER");
+            openResultActivity.putExtra(CLASS,"SECOND CLASS LOWER");
             openResultActivity.putExtra("image",R.drawable.second_class);
             startActivity(openResultActivity);
 
         }else if (average >= 40){
             Intent openResultActivity= new Intent(MainActivity.this,ResultActivity.class);
-            openResultActivity.putExtra("class","PASS");
+            openResultActivity.putExtra(CLASS,"PASS");
             openResultActivity.putExtra("image",R.drawable.second_class);
             startActivity(openResultActivity);
 
@@ -84,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "FAIL",Toast.LENGTH_LONG).show();
 
             Intent openResultActivity= new Intent(MainActivity.this,ResultActivity.class);
-            openResultActivity.putExtra("class","FAIL");
+            openResultActivity.putExtra(CLASS,"FAIL");
             openResultActivity.putExtra("image",R.drawable.second_class);
             startActivity(openResultActivity);
         }

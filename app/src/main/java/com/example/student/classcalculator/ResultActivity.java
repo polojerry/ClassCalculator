@@ -17,13 +17,13 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        classImage = (ImageView) findViewById(R.id.image_class);
-        classText= (TextView) findViewById(R.id.class_text);
+        classImage = findViewById(R.id.image_class);
+        classText= findViewById(R.id.class_text);
 
         getSupportActionBar();
 
         Intent intent = getIntent();
-        String resultClass = intent.getStringExtra("class");
+        String resultClass = intent.getStringExtra(MainActivity.CLASS);
         classText.setText(resultClass);
 
     }
