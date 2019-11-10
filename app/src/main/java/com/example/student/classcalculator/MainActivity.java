@@ -12,11 +12,11 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextInputEditText inpuA;
-    TextInputEditText inpuB;
-    TextInputEditText inpuC;
-    TextInputEditText inpuD;
-    TextInputEditText inpuE;
+    TextInputEditText inputA;
+    TextInputEditText inputB;
+    TextInputEditText inputC;
+    TextInputEditText inputD;
+    TextInputEditText inputE;
 
     Button calculate;
 
@@ -32,11 +32,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        inpuA = (TextInputEditText) findViewById(R.id.input_a);
-        inpuB = (TextInputEditText) findViewById(R.id.input_b);
-        inpuC = (TextInputEditText) findViewById(R.id.input_c);
-        inpuD = (TextInputEditText) findViewById(R.id.input_d);
-        inpuE = (TextInputEditText) findViewById(R.id.input_e);
+        inputA = (TextInputEditText) findViewById(R.id.input_a);
+        inputB = (TextInputEditText) findViewById(R.id.input_b);
+        inputC = (TextInputEditText) findViewById(R.id.input_c);
+        inputD = (TextInputEditText) findViewById(R.id.input_d);
+        inputE = (TextInputEditText) findViewById(R.id.input_e);
 
         calculate = (Button) findViewById(R.id.calculate_button);
 
@@ -80,24 +80,41 @@ public class MainActivity extends AppCompatActivity {
 
         }else {
             Toast.makeText(getApplicationContext(), "FAIL",Toast.LENGTH_LONG).show();
+
+            Intent openResultActivity= new Intent(MainActivity.this,ResultActivity.class);
+            openResultActivity.putExtra("class","FAIL");
+            openResultActivity.putExtra("image",R.drawable.second_class);
+            startActivity(openResultActivity);
         }
 
     }
 
     private void getData() {
-        if (inpuA.length() != 0){
-            As = Double.valueOf(inpuA.getText().toString());
+
+        if (inputA.length() != 0){
+            As = Double.valueOf(inputA.getText().toString());
+        }else{
+            inputA.setText(String.valueOf(0));
+            As = (double) 0;
         }
-        if (inpuB.length() != 0){
-            Bs = Double.valueOf(inpuB.getText().toString());
+        if (inputB.length() != 0){
+            Bs = Double.valueOf(inputB.getText().toString());
+        }else{
+            Bs = (double) 0;
         }
-        if (inpuC.length() != 0){
-            Cs = Double.valueOf(inpuC.getText().toString());
+        if (inputC.length() != 0){
+            Cs = Double.valueOf(inputC.getText().toString());
+        }else{
+            Cs = (double) 0;
         }
-        if (inpuD.length() != 0){
-            Ds = Double.valueOf(inpuD.getText().toString());
-        }if (inpuC.length() != 0){
-            Es = Double.valueOf(inpuE.getText().toString());
+        if (inputD.length() != 0){
+            Ds = Double.valueOf(inputD.getText().toString());
+        }else{
+            Ds = (double) 0;
+        }if (inputC.length() != 0){
+            Es = Double.valueOf(inputE.getText().toString());
+        }else{
+            Es = (double) 0;
         }
 
     }
