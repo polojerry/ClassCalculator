@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity {
 
     TextInputEditText inputA;
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void calculateClass() {
 
-        Double average = ((calculateBestCase() + calculateAverageCase() +calculateWorstCase()) / 3);
+        double average = ((calculateBestCase() + calculateAverageCase() +calculateWorstCase()) / 3);
 
         if (average >= 70){
 
@@ -92,30 +94,30 @@ public class MainActivity extends AppCompatActivity {
     private void getData() {
 
         if (inputA.length() != 0){
-            As = Double.valueOf(inputA.getText().toString());
+            As = Double.valueOf(Objects.requireNonNull(inputA.getText()).toString());
         }else{
             inputA.setText(String.valueOf(0));
             As = (double) 0;
         }
         if (inputB.length() != 0){
-            Bs = Double.valueOf(inputB.getText().toString());
+            Bs = Double.valueOf(Objects.requireNonNull(inputB.getText()).toString());
         }else{
             inputB.setText(String.valueOf(0));
             Bs = (double) 0;
         }
         if (inputC.length() != 0){
-            Cs = Double.valueOf(inputC.getText().toString());
+            Cs = Double.valueOf(Objects.requireNonNull(inputC.getText()).toString());
         }else{
             inputC.setText(String.valueOf(0));
             Cs = (double) 0;
         }
         if (inputD.length() != 0){
-            Ds = Double.valueOf(inputD.getText().toString());
+            Ds = Double.valueOf(Objects.requireNonNull(inputD.getText()).toString());
         }else{
             inputD.setText(String.valueOf(0));
             Ds = (double) 0;
         }if (inputE.length() != 0){
-            Es = Double.valueOf(inputE.getText().toString());
+            Es = Double.valueOf(Objects.requireNonNull(inputE.getText()).toString());
         }else{
             inputE.setText(String.valueOf(0));
             Es = (double) 0;
