@@ -135,9 +135,7 @@ public class MainActivity extends AppCompatActivity {
         Double total = A+ B+ C+ D+ E;
         Double units = As + Bs +Cs +Ds +Es;
 
-        Double average = total/units;
-
-        return average;
+        return total/units;
     }
 
     private double calculateAverageCase() {
@@ -150,9 +148,7 @@ public class MainActivity extends AppCompatActivity {
         Double total = A+ B+ C+ D+ E;
         Double units = As + Bs +Cs +Ds +Es;
 
-        Double average = total/units;
-
-        return average;
+        return total/units;
     }
 
     private double calculateWorstCase() {
@@ -165,9 +161,7 @@ public class MainActivity extends AppCompatActivity {
         Double total = A+ B+ C+ D+ E;
         Double units = As + Bs +Cs +Ds +Es;
 
-        Double average = total/units;
-
-        return average;
+        return total/units;
     }
 
 }
