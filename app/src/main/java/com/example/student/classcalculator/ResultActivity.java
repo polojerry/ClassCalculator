@@ -1,11 +1,11 @@
 package com.example.student.classcalculator;
 
 import android.content.Intent;
-import androidx.core.app.NavUtils;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ResultActivity extends AppCompatActivity {
 
