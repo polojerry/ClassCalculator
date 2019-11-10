@@ -100,20 +100,24 @@ public class MainActivity extends AppCompatActivity {
         if (inputB.length() != 0){
             Bs = Double.valueOf(inputB.getText().toString());
         }else{
+            inputB.setText(String.valueOf(0));
             Bs = (double) 0;
         }
         if (inputC.length() != 0){
             Cs = Double.valueOf(inputC.getText().toString());
         }else{
+            inputC.setText(String.valueOf(0));
             Cs = (double) 0;
         }
         if (inputD.length() != 0){
             Ds = Double.valueOf(inputD.getText().toString());
         }else{
+            inputD.setText(String.valueOf(0));
             Ds = (double) 0;
-        }if (inputC.length() != 0){
+        }if (inputE.length() != 0){
             Es = Double.valueOf(inputE.getText().toString());
         }else{
+            inputE.setText(String.valueOf(0));
             Es = (double) 0;
         }
 
