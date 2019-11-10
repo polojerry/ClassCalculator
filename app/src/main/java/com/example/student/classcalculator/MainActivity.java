@@ -32,13 +32,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        inputA = (TextInputEditText) findViewById(R.id.input_a);
-        inputB = (TextInputEditText) findViewById(R.id.input_b);
-        inputC = (TextInputEditText) findViewById(R.id.input_c);
-        inputD = (TextInputEditText) findViewById(R.id.input_d);
-        inputE = (TextInputEditText) findViewById(R.id.input_e);
+        inputA = findViewById(R.id.input_a);
+        inputB = findViewById(R.id.input_b);
+        inputC = findViewById(R.id.input_c);
+        inputD = findViewById(R.id.input_d);
+        inputE = findViewById(R.id.input_e);
 
-        calculate = (Button) findViewById(R.id.calculate_button);
+        calculate = findViewById(R.id.calculate_button);
 
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
